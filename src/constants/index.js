@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 5, suffix: "+", label: "Major Projects" }, // From your 5 listed projects
+  { value: 20, suffix: "+", label: "Tech Skills" }, // Counted from your skills list
+  { value: 7, suffix: "+", label: "Hackathons" }, // From your achievements
+  { value: 8.5, suffix: "1", label: "B.Tech YGPA" }, // From your education
 ];
 
 const logoIconsList = [
@@ -73,26 +73,25 @@ const logoIconsList = [
 
 const abilities = [
   {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    imgPath: "/images/seo.png", // Replace with a relevant icon (e.g., problem-solving)
+    title: "Problem Solving",
+    desc: "Strong analytical and critical thinking skills to tackle complex challenges.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    imgPath: "/images/chat.png", // Replace with a relevant icon (e.g., communication)
+    title: "Effective Communication",
+    desc: "Clearly communicating technical concepts to diverse stakeholders.",
   },
   {
-    imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    imgPath: "/images/time.png", // This one fits well
+    title: "Time Management",
+    desc: "Efficiently managing tasks and projects to meet deadlines.",
   },
 ];
-
 const techStackImgs = [
   {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
+    name: "ML Engineer",
+    imgPath: "/images/logos/tensorflow.png", // Replace with your image
   },
   {
     name: "Python Developer",
@@ -114,7 +113,7 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "React Developer",
+    name: "ML Engineer",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
@@ -147,40 +146,83 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    // Project 1: LookALike.com
+    review:
+      "Developed a full-stack AI application to identify lookalikes by matching user-uploaded photos against a database of celebrity and user faces using deep learning.",
+    imgPath: "/images/lookalikesnippet.png",
+    logoPath: "/images/lookalike.png",
+    title: "LookALike.com (Full-Stack AI App)",
+    date: "August 2025",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Engineered a dual-input system (webcam vs. upload) to generate a robust, averaged facial embedding.",
+      "Architected a decoupled system with Next.js frontend and a Python Flask AI microservice.",
+      "Utilized a PostgreSQL database with pgvector for high-speed, scalable similarity searches.",
     ],
+    githubLink: "https://github.com/the-steelix-flame/LookALike.com", // ⬅️ ADD YOUR LINK
+    liveLink: "https://newlook-alike.vercel.app/", // ⬅️ ADD YOUR LINK
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    // Project 2: Symbiosis
+    review:
+      "Developed a full-stack, AI-driven collaborative platform for environmental action, uniting diverse stakeholders to monitor and address ecological issues across India.",
+    imgPath: "/images/symbiosissnippet.png",
+    logoPath: "/images/symbiosislogo.png",
+    title: "Symbiosis (Hack Heritage 3.0)",
+    date: "August 2025",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Engineered a dynamic 'Eco-Score' for each Indian state using crowdsourced data and the Google Gemini API.",
+      "Architected a React frontend (with Leaflet.js) and a Node.js/Express.js backend.",
+      "Used Google Gemini API for complex geospatial reasoning and predicting environmental hotspots.",
     ],
+    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
+    liveLink: "symbiosis-ochre.vercel.app", // ⬅️ ADD YOUR LINK
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    // Project 3: PatternIQ
+    review:
+      "Engineered a three-stage AI-Powered Trading Intelligence Platform that translates plain-English trading strategies into executable Python code for no-code backtesting.",
+    imgPath: "/images/patternIQ.png",
+    logoPath: "/images/patterniqlogo.png",
+    title: "PatternIQ (Securities Market Hackathon)",
+    date: "July 2025",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Built 'The Arena', a gamified community hub with adaptive quizzes from real-time market news.",
+      "Designed and deployed FinBERT (NLP), LSTM Autoencoder (anomalies), and CNN (candlestick) models.",
+      "Full-stack implementation using FastAPI, React, Firebase, and Google OAuth 2.0.",
     ],
+    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
+    liveLink: "https://github.com/the-steelix-flame/PatternIQ", // ⬅️ ADD YOUR LINK
+  },
+  {
+    // Project 4: FacE-RecO
+    review:
+      "Created FacE-RecO, a real-time automated employee attendance system using easy-to-handle lightweight ML models, winning Finalist at FLUXUS.",
+    imgPath: "/images/project_facereco.png",
+    logoPath: "/images/facereco.png",
+    title: "FacE-RecO (FLUXUS, IIT Indore)",
+    date: "March 2025",
+    responsibilities: [
+      "Enabled seamless entry management by eliminating manual check-ins and reducing processing latency.",
+      "Added spoof detection to identify screen-based or photo attacks by analyzing light reflections and facial depth.",
+      "Achieved Finalist position among 1000+ participants in the hackathon.",
+    ],
+    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
+    liveLink: "https://github.com/the-steelix-flame/FacE-RecO", // ⬅️ Example: Leave empty if no live link
+  },
+  {
+    // Project 5: TrackInTrade
+    review:
+      "Built TrackInTrade, an AI-powered trading journal to help log trades, analyse performance, and gain insights.",
+    imgPath: "/images/ttsnippet.png",
+    logoPath: "/images/Trackintrade.png",
+    title: "TrackInTrade (Design Thinking Lab, HITK)",
+    date: "April 2025",
+    responsibilities: [
+      "Enabled smart visualizations like advanced charts and heatmaps to track profitability day by day.",
+      "Integrated AI-driven analytics to highlight patterns, emotional biases, and improvement areas.",
+    ],
+    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
+    liveLink: "https://track-in-final-git-main-akash-kumars-projects-63e80963.vercel.app/home", // ⬅️ ADD YOUR LINK
   },
 ];
 
@@ -248,6 +290,7 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    link: "https://www.instagram.com/goku_x_akash.5/",
   },
   {
     name: "fb",

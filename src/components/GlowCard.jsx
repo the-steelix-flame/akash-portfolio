@@ -1,47 +1,66 @@
 import { useRef } from "react";
 
-const GlowCard = ({ card, index, children }) => {
-  // refs for all the cards
+// --- ⬇️ 'link' PROP ADD KIYA HAI ⬇️ ---
+const GlowCard = ({ card, index, children, link }) => {
   const cardRefs = useRef([]);
 
-  // when mouse moves over a card, rotate the glow effect
+  // ... (aapka handleMouseMove logic poora same rahega) ...
   const handleMouseMove = (index) => (e) => {
-    // get the current card
     const card = cardRefs.current[index];
     if (!card) return;
-
-    // get the mouse position relative to the card
     const rect = card.getBoundingClientRect();
     const mouseX = e.clientX - rect.left - rect.width / 2;
     const mouseY = e.clientY - rect.top - rect.height / 2;
-
-    // calculate the angle from the center of the card to the mouse
     let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-
-    // adjust the angle so that it's between 0 and 360
     angle = (angle + 360) % 360;
-
-    // set the angle as a CSS variable
     card.style.setProperty("--start", angle + 60);
   };
 
-  // return the card component with the mouse move event
   return (
+    // --- ⬇️ YEH AAPKA ORIGINAL DIV HAI, BAS 'relative' CLASS ADD KI HAI ⬇️ ---
     <div
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
-      className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
+      className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column relative" // <-- 'relative' ADD KIYA
     >
+      {/* Yeh glow div hai */}
       <div className="glow"></div>
-      <div className="flex items-center gap-1 mb-5">
-        {Array.from({ length: 5 }, (_, i) => (
-          <img key={i} src="/images/star.png" alt="star" className="size-5" />
-        ))}
-      </div>
-      <div className="mb-5">
-        <p className="text-white-50 text-lg">{card.review}</p>
-      </div>
+
+      {/* Yeh Testimonial wala part hai (stars) */}
+      {card && (
+        <div className="flex items-center gap-1 mb-5">
+          {Array.from({ length: 5 }, (_, i) => (
+            <img key={i} src="/images/star.png" alt="star" className="size-5" />
+          ))}
+        </div>
+      )}
+
+      {/* Yeh Testimonial wala part hai (review) */}
+      {card && (
+        <div className="mb-5">
+          <p className="text-white-50 text-lg">{card.review}</p>
+        </div>
+      )}
+
+      {/* Yeh 'children' hai (Project ki image yahaan aayegi) */}
       {children}
+
+      {/* --- ⬇️ YEH HAI ASLI SOLUTION ⬇️ --- */}
+      {/* Agar 'link' prop mila hai, toh ek invisible link banao jo poore card ko cover kare.
+        'absolute inset-0' ka matlab hai: top:0, left:0, right:0, bottom:0
+        'z-10' use upar le aayega taaki woh click ho sake.
+      */}
+      {card && (
+        <a
+          href={card.liveLink}
+          target={card.liveLink && !card.liveLink.startsWith("#") ? "_blank" : "_self"}
+          rel="noopener noreferrer"
+          className="absolute inset-0 z-10"
+        >
+          {/* Screen readers ke liye, taaki card.liveLink khaali na lage */}
+          <span className="sr-only">View details</span>
+        </a>
+      )}
     </div>
   );
 };
