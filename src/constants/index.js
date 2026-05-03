@@ -1,7 +1,7 @@
 const navLinks = [
   {
     name: "Work",
-    link: "#work",
+    link: "#experience",
   },
   {
     name: "Experience",
@@ -10,10 +10,6 @@ const navLinks = [
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
   },
 ];
 
@@ -29,10 +25,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 5, suffix: "+", label: "Major Projects" }, // From your 5 listed projects
-  { value: 20, suffix: "+", label: "Tech Skills" }, // Counted from your skills list
-  { value: 7, suffix: "+", label: "Hackathons" }, // From your achievements
-  { value: 8.5, suffix: "1", label: "B.Tech YGPA" }, // From your education
+  { value: 10, suffix: "+", label: "Major Projects" }, // From your 5 listed projects
+  { value: 25, suffix: "+", label: "Tech Skills" }, // Counted from your skills list
+  { value: 10, suffix: "+", label: "Hackathons" }, // From your achievements
+  { value: 9.3, suffix: "1", label: "B.Tech SGPA" }, // From your education
 ];
 
 const logoIconsList = [
@@ -73,19 +69,29 @@ const logoIconsList = [
 
 const abilities = [
   {
-    imgPath: "/images/seo.png", // Replace with a relevant icon (e.g., problem-solving)
+    imgPath: "https://img.icons8.com/fluency/96/puzzle.png", 
     title: "Problem Solving",
-    desc: "Strong analytical and critical thinking skills to tackle complex challenges.",
+    desc: "Honestly, I just love figuring out why a model isn't learning or why a pipeline broke. Whether it's digging through messy data or tweaking hyperparameters, I treat every bug like a puzzle. Just a small achievement, Leetcode Contest Rating: 1800+ (Top 5% globally).",
   },
   {
-    imgPath: "/images/chat.png", // Replace with a relevant icon (e.g., communication)
-    title: "Effective Communication",
-    desc: "Clearly communicating technical concepts to diverse stakeholders.",
+    imgPath: "https://img.icons8.com/fluency/96/communication.png", 
+    title: "Clear Communication",
+    desc: "I can translate complex model architectures into plain English. It's really about making sure the non-technical folks actually understand what the model is doing (and what it can't do!). I really enjoy breaking down those complex concepts into something everyone can grasp.",
   },
   {
-    imgPath: "/images/time.png", // This one fits well
+    imgPath: "https://img.icons8.com/fluency/96/time-management.png", 
     title: "Time Management",
-    desc: "Efficiently managing tasks and projects to meet deadlines.",
+    desc: "Training models takes time, so I'm big on optimizing my workflow. I juggle data prep, coding, and testing so I'm never just staring at a progress bar when a deadline is coming up.",
+  },
+  {
+    imgPath: "https://img.icons8.com/fluency/96/learning.png", 
+    title: "Fast Learner",
+    desc: "The AI landscape changes literally every week. I spend a lot of time reading popular research papers, scrolling through YouTube videos, and playing with the latest frameworks just to stay in the loop. You kind of have to love learning in this field!",
+  },
+  {
+    imgPath: "https://img.icons8.com/fluency/96/group-background-selected.png", 
+    title: "Team Player",
+    desc: "I don't just build a model and throw it over the wall. I love working closely with frontend and backend developers to make sure the AI actually integrates smoothly into the final product.",
   },
 ];
 const techStackImgs = [
@@ -146,6 +152,39 @@ const techStackIcons = [
 
 const expCards = [
   {
+    // Project 7: TrackInTrade
+    review:
+      "Built TrackInTrade, an AI-powered trading journal to help log trades, analyse performance, and gain insights.",
+    youtubeId: "",
+    imgPath: "/images/ttsnippet.png",
+    logoPath: "/images/Trackintrade.png",
+    title: "TrackInTrade (Design Thinking Lab, HITK)",
+    date: "April 2025",
+    responsibilities: [
+      "Enabled smart visualizations like advanced charts and heatmaps to track profitability day by day.",
+      "Integrated AI-driven analytics to highlight patterns, emotional biases, and improvement areas.",
+    ],
+    githubLink: "https://github.com/the-steelix-flame/TrackInTrade",
+    liveLink: "https://track-in-trade-gevv.vercel.app/",
+  },
+  {
+    // Project 6: FacE-RecO
+    review:
+      "Created FacE-RecO, a real-time automated employee attendance system using easy-to-handle lightweight ML models, winning Finalist at FLUXUS.",
+    youtubeId: "",
+    imgPath: "/images/project_facereco.png",
+    logoPath: "/images/facereco.png",
+    title: "FacE-RecO (FLUXUS, IIT Indore)",
+    date: "March 2025",
+    responsibilities: [
+      "Enabled seamless entry management by eliminating manual check-ins and reducing processing latency.",
+      "Added spoof detection to identify screen-based or photo attacks by analyzing light reflections and facial depth.",
+      "Achieved Finalist position among 1000+ participants in the hackathon.",
+    ],
+    githubLink: "https://github.com/the-steelix-flame/FacE-RecO",
+    liveLink: "",
+  },
+  {
     // Project 1: LookALike.com
     review:
       "Developed a full-stack AI application to identify lookalikes by matching user-uploaded photos against a database of celebrity and user faces using deep learning.",
@@ -174,7 +213,7 @@ const expCards = [
       "Architected a React frontend (with Leaflet.js) and a Node.js/Express.js backend.",
       "Used Google Gemini API for complex geospatial reasoning and predicting environmental hotspots.",
     ],
-    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
+    githubLink: "https://github.com/the-steelix-flame/Symbiosis", // ⬅️ ADD YOUR LINK
     liveLink: "symbiosis-ochre.vercel.app", // ⬅️ ADD YOUR LINK
   },
   {
@@ -190,40 +229,61 @@ const expCards = [
       "Designed and deployed FinBERT (NLP), LSTM Autoencoder (anomalies), and CNN (candlestick) models.",
       "Full-stack implementation using FastAPI, React, Firebase, and Google OAuth 2.0.",
     ],
-    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
-    liveLink: "https://github.com/the-steelix-flame/PatternIQ", // ⬅️ ADD YOUR LINK
+    githubLink: "https://github.com/the-steelix-flame/PatternIQ", // ⬅️ ADD YOUR LINK
+    liveLink: "https://pattern-iq-1o1d.vercel.app/", // ⬅️ ADD YOUR LINK
   },
   {
-    // Project 4: FacE-RecO
+    // Project 2: Lexi SimplifAI
     review:
-      "Created FacE-RecO, a real-time automated employee attendance system using easy-to-handle lightweight ML models, winning Finalist at FLUXUS.",
-    imgPath: "/images/project_facereco.png",
-    logoPath: "/images/facereco.png",
-    title: "FacE-RecO (FLUXUS, IIT Indore)",
-    date: "March 2025",
+      "Architected a serverless web app integrating Google Cloud Vision API for OCR and Gemini 1.5 Flash for advanced NLP tasks like document summarization and risk detection.",
+    youtubeId: "", 
+    imgPath: "/images/lexisnippet.png",
+    logoPath: "/images/lexilogo.png",
+    title: "Lexi SimplifAI (Full-Stack / Cloud AI Pipeline)",
+    date: "2025",
     responsibilities: [
-      "Enabled seamless entry management by eliminating manual check-ins and reducing processing latency.",
-      "Added spoof detection to identify screen-based or photo attacks by analyzing light reflections and facial depth.",
-      "Achieved Finalist position among 1000+ participants in the hackathon.",
+      "Built multi-language translation and an interactive context-aware Q&A Node.js API.",
+      "Deployed on Vercel utilizing a fully integrated Firebase auth and storage stack.",
+      "Integrated Gemini 1.5 Flash and Google Cloud Vision API to establish a highly scalable AI document processing pipeline.",
     ],
-    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
-    liveLink: "https://github.com/the-steelix-flame/FacE-RecO", // ⬅️ Example: Leave empty if no live link
+    githubLink: "https://github.com/the-steelix-flame/lexi-simplifai", 
+    liveLink: "https://lexi-simplifai-kitb.vercel.app/", 
   },
   {
-    // Project 5: TrackInTrade
+    // Project 4: AERA
     review:
-      "Built TrackInTrade, an AI-powered trading journal to help log trades, analyse performance, and gain insights.",
-    imgPath: "/images/ttsnippet.png",
-    logoPath: "/images/Trackintrade.png",
-    title: "TrackInTrade (Design Thinking Lab, HITK)",
-    date: "April 2025",
+      "Developed a real-time spatial engine optimizing travel routes for biological safety, significantly reducing PM2.5 and NO2 exposure by 40%.",
+    youtubeId: "", 
+    imgPath: "/images/aerasnippet.png",
+    logoPath: "/images/aeralogo.png",
+    title: "AERA (AI Health Tech / Routing Algorithm)",
+    date: "2025",
     responsibilities: [
-      "Enabled smart visualizations like advanced charts and heatmaps to track profitability day by day.",
-      "Integrated AI-driven analytics to highlight patterns, emotional biases, and improvement areas.",
+      "Integrated Agentic AI (Gemini Pro) for live environmental reasoning, dynamic health alerts, and real-time data parsing.",
+      "Built a Long-Term Impact Predictor and gamified user tracking dashboard using React.js and FastAPI.",
+      "Leveraged the Open-Meteo API and Leaflet.js to chart dynamic, health-optimized routing map layers.",
     ],
-    githubLink: "YOUR_GITHUB_LINK_HERE", // ⬅️ ADD YOUR LINK
-    liveLink: "https://track-in-final-git-main-akash-kumars-projects-63e80963.vercel.app/home", // ⬅️ ADD YOUR LINK
+    githubLink: "https://github.com/the-steelix-flame/aera", 
+    liveLink: "https://aera-hackathon-b3711.web.app/", 
   },
+  {
+    // Project 8: ECHO
+    review:
+      "Built an empathetic conversational AI featuring a 5-layer cognitive pipeline that builds a living psychological model of the user instead of generic pattern matching.",
+    youtubeId: "", 
+    imgPath: "/images/echosnippet.png",
+    logoPath: "/images/echologo.png",
+    title: "ECHO (OpenAImer - AI in Mental Health)",
+    date: "April 2026",
+    responsibilities: [
+      "Engineered a 10-dimensional Emotional Signal Decoder using Gemini 2.0 Flash to extract underlying distress, tone, and linguistic markers.",
+      "Architected a Narrative Engine to build a real-time, evolving psychological profile and a ChromaDB Hybrid RAG pipeline for grounded therapeutic context.",
+      "Implemented a two-pass Safety Gate for crisis escalation and a vanilla JS frontend equipped with typing hesitation analysis and voice input.",
+    ],
+    githubLink: "https://github.com/mandrita16/ECHO-Mental-Health-AI",
+    liveLink: "https://huggingface.co/spaces/kumar-akash/echo-backend", 
+  }
+  
 ];
 
 const expLogos = [

@@ -8,7 +8,7 @@ import Particles from "./Particles";
 import { Suspense } from "react";
 
 const HeroExperience = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 798px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
@@ -18,7 +18,7 @@ const HeroExperience = () => {
       {/* Configure OrbitControls to disable panning and control zoom based on device type */}
       <OrbitControls
         enablePan={false} // Prevents panning of the scene
-        enableZoom={!isTablet} // Disables zoom on tablets
+        enableZoom={false} // Disables zoom on tablets
         maxDistance={20} // Maximum distance for zooming out
         minDistance={5} // Minimum distance for zooming in
         minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation

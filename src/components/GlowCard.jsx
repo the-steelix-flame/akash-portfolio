@@ -52,15 +52,14 @@ const GlowCard = ({ card, index, children, link }) => {
       */}
       {card && (
         <a
-          href={card.liveLink}
-          target={card.liveLink && !card.liveLink.startsWith("#") ? "_blank" : "_self"}
+          href={card.youtubeId ? `https://youtu.be/${card.youtubeId}` : card.liveLink}
+          target="_blank"
           rel="noopener noreferrer"
           className="absolute inset-0 z-10"
         >
-          {/* Screen readers ke liye, taaki card.liveLink khaali na lage */}
-          <span className="sr-only">View details</span>
+          <span className="sr-only">Watch Video</span>
         </a>
-      )}
+      )} 
     </div>
   );
 };
