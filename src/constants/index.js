@@ -214,7 +214,7 @@ const expCards = [
       "Used Google Gemini API for complex geospatial reasoning and predicting environmental hotspots.",
     ],
     githubLink: "https://github.com/the-steelix-flame/Symbiosis", // ⬅️ ADD YOUR LINK
-    liveLink: "symbiosis-ochre.vercel.app", // ⬅️ ADD YOUR LINK
+    liveLink: "https://symbiosis-ochre.vercel.app", // ⬅️ ADD YOUR LINK
   },
   {
     // Project 3: PatternIQ
